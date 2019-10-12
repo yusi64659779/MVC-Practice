@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model MyMVC.Models.StudentLogin
+@{
+    Layout = null;
+}
+<!DOCTYPE>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StudentLoginForm</title>
+</head>
+<body>
+    <form asp-action="StudentLoginForm" method="post">
+        <p>
+            <label asp-for="SName">Your Name:</label>
+            <input asp-for="SName" />
+        </p>
+        <p>
+            <label asp-for="SEmail">Your Email:</label>
+            <input asp-for="SEmail" />
+        </p>
+        <p>
+            <label asp-for="Password">Your Password:</label>
+            <input asp-for="Password" />
+        </p>
+        <a asp-action="Welcomepage">Login</a>
+    </form>
+</body>
+</html>

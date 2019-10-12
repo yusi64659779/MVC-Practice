@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Courses</title>
+</head>
+<body>
+    <h2>Here is the list of courses that you have in this semester:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>CourseID</th>
+                <th>CourseName</th>
+                <th>Teacher</th>
+                <th>Location</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (MyMVC.Models.CoursesInformation r in Model)
+            {
+            <tr>
+                <td>@r.CourseID</td>
+                <td>@r.CourseName</td>
+                <td>@r.Teacher</td>
+                <td>@r.Location</td>
+                <td>@r.Time</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
