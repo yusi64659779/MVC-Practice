@@ -2,43 +2,39 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace MyMVC.Models
 {
     public class CoursesInformation
     {
+        [Required]
+        [DataType(DataType.Text)]
+        [DisplayName("CourseID")]
         public string CourseID { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        [DisplayName("CourseName")]
         public string CourseName { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        [DisplayName("Teacher")]
         public string Teacher { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        [DisplayName("Location")]
         public string Location { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        [DisplayName("Time")]
         public string Time { get; set; }
 
-        CoursesInformation CourInfo1 = new CoursesInformation()
-        {
-            CourseID = "ISM6225",
-            CourseName = "Distributed Information System",
-            Teacher = "Clinton Daniel",
-            Location = "CIS2084",
-            Time = "T 6:30PM-9-15PM"
-        };
-
-        CoursesInformation CourInfo2 = new CoursesInformation()
-        {
-            CourseID = "ISM6155",
-            CourseName = "Enterprise Information System",
-            Teacher = "Deepak Sainanee",
-            Location = "BSN230",
-            Time = "R 6:30PM-9:15PM"
-        };
-
-        CoursesInformation CourInfo3 = new CoursesInformation()
-        {
-            CourseID = "ISM6218",
-            CourseName = "Advanced Database Management",
-            Teacher = "Don Berndt",
-            Location = "BSN2300",
-            Time = "M 6:30PM-10:15PM"
-        };
-
+        
     }
 }
